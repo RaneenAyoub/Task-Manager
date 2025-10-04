@@ -1,0 +1,137 @@
+:root {
+  --bg-color: #f5f6fa;
+  --text-color: #2f3640;
+  --title-color: #273c75;
+  --subtitle-color: #192a56;
+
+  --input-border: #dcdde1;
+
+  --btn-primary: #44bd32;
+  --btn-primary-hover: #4cd137;
+
+  --btn-filter: #718093;
+  --btn-filter-hover: #353b48;
+
+  --btn-done: #44bd32;
+  --btn-done-hover: #4cd137;
+
+  --btn-edit: #e1b12c;
+  --btn-edit-hover: #fbc531;
+
+  --btn-delete: #e84118;
+  --btn-delete-hover: #c23616;
+
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0,0,0,0.1);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  color: var(--title-color);
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  background: var(--btn-primary);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: var(--btn-primary-hover);
+}
+
+/* Filter buttons */
+div button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background: var(--btn-filter);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+div button:hover {
+  background: var(--btn-filter-hover);
+}
+
+/* Task List */
+h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: var(--subtitle-color);
+}
+
+ul {
+  list-style: none;
+  width: 400px;
+}
+
+li {
+  background: var(--card-bg);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px var(--card-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons inside tasks */
+li button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+li button:nth-child(1) { background: var(--btn-done); }   /* Done */
+li button:nth-child(1):hover { background: var(--btn-done-hover); }
+
+li button:nth-child(2) { background: var(--btn-edit); }  /* Edit */
+li button:nth-child(2):hover { background: var(--btn-edit-hover); }
+
+li button:nth-child(3) { background: var(--btn-delete); }  /* Delete */
+li button:nth-child(3):hover { background: var(--btn-delete-hover); }
